@@ -15,7 +15,8 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Hi Aman!
+          Hi Aman! 
+          "What ever you do, do it with your all Love, happiness, gratitude." --Amanuel Gebrelibanos 
         </a>
       </header>
     </div>
