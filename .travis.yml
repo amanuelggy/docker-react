@@ -17,6 +17,6 @@ deploy:
   bucket_name: "elasticbeanstalk-us-east-2-757303596342"
   on:
     branch: main
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: $AWS_SECRET_KEY
+  access_key_id: $AWS_ACCESS_KEY_ONE
+  secret_access_key: $AWS_SECRET_KEY_ONE
 
