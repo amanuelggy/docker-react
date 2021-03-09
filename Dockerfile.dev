@@ -1,0 +1,13 @@
+FROM node:alpine
+
+WORKDIR '/app'
+
+COPY package.json .
+RUN npm install
+
+# Since we are mapping using reference pointer in the docker-compose.yml to local
+# folders, we dont need to use the 'COPY ..' below, but it's recommended to have it.
+# just for a reference for your self.
+COPY . . 
+
+CMD ["npm", "run", "start"]

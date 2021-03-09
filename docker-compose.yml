@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web: # you can call it anything (it's a container name)
+    build:
+      context: . # use current directory
+      dockerfile: Dockerfile.dev # to user dockerfile.dev found in the current directory to build the image
+      environment:
+        - CHOKIDAR_USEPOLLING=true
+    ports:
+      - "3000:3000" # the '-' indicates that we will be listing muliple ports
+    volumes:
+      - /app/node_modules
+      - .:/app
+  tests:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - .:/app
+      command: ["npm", "run", "test"]
